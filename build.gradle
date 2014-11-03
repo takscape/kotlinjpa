@@ -1,0 +1,25 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:0.9.66'
+    }
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'application'
+
+mainClassName = 'ninja.util.kotlinjpa.KotlinjpaPackage'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.jetbrains.kotlin:kotlin-stdlib:0.9.66'
+    compile 'org.apache.openjpa:openjpa:2.3.0'
+    compile 'com.h2database:h2:1.4.182'
+    compile 'org.apache.commons:commons-lang3:3.3.2'
+    testCompile 'junit:junit:4.11'
+}
